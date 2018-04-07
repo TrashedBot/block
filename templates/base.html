@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Blockchain Transportion</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+  html, body {
+      height: 100%;
+      background: #17263C;
+      color: #4CAF50;
+  }
+  .form-control {
+    color: #000000;
+    background-color: #746855;
+    border: 2px solid #0b4e92;
+  }
+  .btn-primary {
+    color: #000;
+    border-color: #ff980057;
+  }
+  .btn-dark {
+    color: #007bff;
+    border-color: #ff980057;
+  }
+
+  </style>
+</head>
+
+<body>
+
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-6  mx-auto  mt-5" >
+
+        {% block content %}
+
+        {% endblock %}
+
+      </div>
+    </div>
+  </div>
+
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-6  mx-auto  mt-5 text-center" >
+
+        <form action="{{ url_for('check')}}" method="GET">
+          <button type="submit" class="btn btn-dark">TrashedDAO</button>
+          <small class="form-text text-muted">the press "TrashedDAO" will happen checking results</small>
+        </form>
+
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-6  mx-auto  mt-5" >
+
+        {% block checking %}
+
+        {% endblock %}
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
