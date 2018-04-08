@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="{{ url_for('index') }}" method="POST">
+
+  <div class="form-group">
+    <label for="exampleInputTrashedbot_1">from whom TrashedBot</label>
+    <input type="text" class="form-control" id="exampleInputTrashedbot_1" placeholder="address" name="trashedbot_1" value="{{request.form.get('trashedbot_1', ' ')}}">
+    <small class="form-text text-muted">TrashedBot №...</small>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInpuPrice">Price transportion</label>
+    <input type="text" class="form-control" id="exampleInputPrice" placeholder="1000" name="price" value="{{request.form.get('price', ' ')}}">
+    <small class="form-text text-muted">Trashed constant</small>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputTrashedbot_2">to whom TrashedBot</label>
+    <input type="text" class="form-control" id="exampleInputTrashedbot_2" placeholder="address" name="trashedbot_2" value="{{request.form.get('trashedbot_2', ' ')}}">
+    <small class="form-text text-muted">TrashedBot №...</small>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <small class="form-text text-muted">the press "Submit" will happen record in block</small>
+
+</form>
+{% endblock %}
+
+{% block checking %}
+  {% for conclusion_result in res_dao %}
+     <div class="result">
+        transportion {{ conclusion_result['block']}} : {{conclusion_result['result'] }}
+     </div>
+  {% endfor%}
+
+{% endblock %}
