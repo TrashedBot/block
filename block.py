@@ -25,7 +25,7 @@ def check_integrity():
     for box in files[1:]:
         file_back = open(blockchain_dir + str(box))
         hash_back = json.load(file_back)['hash']
-#     или в одну строку    hash_back = json.load(open(blockchain_dir + str(box)))['hash']     # возвращение словаря
+#     hash_back = json.load(open(blockchain_dir + str(box)))['hash']  
         box_file = str(box -1)
         hash_actual = get_hash(box_file)
 #        print(hash_actual)
@@ -43,7 +43,7 @@ def check_integrity():
 
 def write_block(name, amount, to_whom, prev_hash=''):
 #    blockchain_dir = os.curdir + '/blockchain/'
-#    files = os.listdir(blockchain_dir)             # listdir  возврат неотсортированного списка.
+#    files = os.listdir(blockchain_dir)             
 #    files = sorted([int(i) for i in files])
     files = get_files()
     last_file = files[-1]
@@ -57,13 +57,13 @@ def write_block(name, amount, to_whom, prev_hash=''):
              'to_whom': to_whom,
              'hash': prev_hash}
 
-    with open(blockchain_dir + filename, 'w') as file:                #  + 'test'
+    with open(blockchain_dir + filename, 'w') as file:                
         json.dump(data, file, indent=4, ensure_ascii=False)
 
 
 
 def main():
-#    write_block(name = 'Moscva', amount = 5, to_whom = 'Volocolamsck')   #  Volocolamsck -> Jadrovo -> Moscva -> Volocolamsck
+#    write_block(name = '', amount = 5, to_whom = '') 
 #     print(check_integrity())
      check_integrity()
 
