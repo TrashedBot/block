@@ -1,3 +1,4 @@
+# http://trashedbot.github.io  2018-2021 The project Trashed 
 import json
 import os
 import hashlib
