@@ -5,3 +5,4 @@
 <p><a href="https://trashedbot.github.io/my-project/4.Suggestions%20solutions/Suggestions%20solutions.html">Suggestions solutions.</a></p>
 
 <p><a href="http://trashedbot.github.io/enthusiastic_example/enthusiastic_example.html">Click The enthusiastic example of process of transportation "Trashed"!</a></p>
+<p>2018-2021 The project Trashed</p>
