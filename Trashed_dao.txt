@@ -28,6 +28,6 @@ contract TRASHED_DAO is ERC223Token {
     }
 }
 
-//TRASHED_DAO.sol
-//<p>2018 project Trashed</p>
+//TRASHED_DAO.sol block #12287888
+//<p>3.03.2021 project Trashed</p>
 //<p><a href="http://trashed.pw">[Click WEB!]</a></p>
